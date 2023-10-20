@@ -1,22 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-  window.onload = function() {
-    var date = new Date();
-    var today = date.getDate();
-    var month = date.getMonth() + 1;
 
-    if (today === 20 && month === 10) {
-      document.getElementById("message").innerHTML = "Chúc mừng! Hôm nay là ngày 20/10!";
+<head>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    else {
-      document.getElementById("message").innerHTML = "Hôm nay không phải là ngày 20/10!";
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 40px;
     }
-  };
-</script>
+
+    h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: background-color 0.3s;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .button:active {
+      background-color: #3e8e41;
+    }
+
+    .effect {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      margin: 20px auto;
+      border-radius: 50%;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      cursor: pointer;
+    }
+
+    .effect:hover {
+      opacity: 1;
+    }
+
+    .effect:active {
+      background-color: blue;
+    }
+  </style>
 </head>
+
 <body>
-  <h1 id="message"></h1>
+  <div class="container">
+    <h1>Chúc mừng bạn có một ngày 20/10 thật nhiều ý nghĩa</h1>
+    <a href="#">
+      <div class="button">Click here</div> <!-- Điều hướng khi click -->
+    </a>
+    <div class="effect"></div> <!-- Hiệu ứng click -->
+  </div>
+
+  <script>
+    document.querySelector('.button').addEventListener('click', function () {
+      // Thực hiện các hành động khi nút được click
+      alert("Chúc bạn luôn xinh đẹp và hạnh phúc!");
+    });
+
+    document.querySelector('.effect').addEventListener('click', function () {
+      // Thực hiện các hành động khi vùng được click
+      this.style.backgroundColor = 'green';
+    });
+  </script>
 </body>
+
 </html>
