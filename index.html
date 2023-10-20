@@ -3,7 +3,7 @@
 
 <head>
   <style>
-    /* @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); */
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
     body {
       background-color: #f1f1f1;
@@ -141,6 +141,16 @@
       alert(message);
     }
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.ajaxSetup({
+        headers: {
+          'x-requested-with': 'XMLHttpRequest'
+        }
+      });
+    });
+    </script>
 </body>
 
 </html>
